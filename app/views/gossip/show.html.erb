@@ -1,0 +1,5 @@
+<h1><%= @gossip.title%></h1>
+<p>Written by <%= link_to "#{@gossip.user.first_name}", student_path(@gossip.user_id) %></p>
+<p class="m5 p3 xshadow border border-light"><%= @gossip.content %></p>
+<p><em class='text-grey'> - created the <%= @date%> -</em></p>
+

@@ -1,0 +1,17 @@
+<h1 class="mb-5">Bienvenue sur le profil de <%= @user.first_name %> <%= @user.last_name %> !</h1>
+<div class="container col-6 d-flex flex-column align-items-center">
+    <h4><%= @user.age %> ans, <%= @user.city.name %></h4>
+    <p><em><%= @user.email%></em></p>
+
+
+    <p class="align-self-start"><strong>description :</strong></p>
+    <p class="align-self-start"><%=@user.description %></p>
+    <br />
+    <br />
+    <div class="container p-0">
+        <p><strong>Liste des gossips publiés :</strong></p>
+        <p><% @gossips.each do |gossip| %><p>
+            <%= link_to "#{gossip.title}", gossip_path(gossip) %>
+        <% end %>
+    </div>
+</div>

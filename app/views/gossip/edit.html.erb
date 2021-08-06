@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :website, :as => :url %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :age, :hint => "This defaults to 'number' input based on field type" %>
+  <%= f.button :submit %>
+<% end -%>

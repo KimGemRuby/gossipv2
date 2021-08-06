@@ -1,0 +1,157 @@
+<% yield %>
+<h1 class="mb-5">Welcome in to The Hacking Gossip Project</h1>
+<div class="container">
+    <% @gossips.each do |gossip| %>
+        <div>
+            <h2><a href=<%= gossip_path(gossip) %>><%= gossip.title %></a></h2>
+            <p><em>written by <a href="<%= student_path(gossip.user_id) %>"><%= gossip.user.first_name%></a></em></p>
+        </div>
+    <% end %>
+</div>
+
+<%
+=begin%>
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"> Blaze </th>
+      <th scope="col">Commentaire</th>
+      <th scope="col">Gossip Content</th>
+      <th scope="col">date</th>
+      <%=link_to "Create Gossip", new_gossip_path %>
+    </tr>
+  </thead>
+  <tbody> 
+<%
+=end%>
+  <% @gossips.each do |gossip| %>
+    <tr>
+      <th scope="row"><%= gossip.id %></th>
+      <td> <%= gossip.title %> </td>
+      <td> <%= link_to 'voir le contenu', gossip_path(gossip.id) %> </td>
+    </tr>
+     <tr>
+      <th scope="row"><%= gossip.id %></th>
+      <td> <%= gossip.title %> </td>
+      <td> <%= link_to 'voir le contenu', gossip_path(gossip.id) %> </td>
+      <%=link_to "Create Gossip sex", new_gossip_path %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Gossip de steph</h5>
+        <p class="card-text">La chèvre de Mr Seguin
+La chèvre de Mr Seguin  d'Alphonse Daudet
+M. Seguin n'avait jamais eu de bonheur avec ses chèvres. Il les perdait toutes de la même façon : un beau matin, elles cassaient leur corde, s'en allaient dans la montagne, et là-haut le loup les mangeait.
+
+
+Ni les caresses de leur maître, ni la peur du loup, rien ne les retenait.
+C'était, parait-il, des chèvres indépendantes, voulant à tout prix le grand air et la liberté.
+
+
+Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. Il disait :
+- C'est fini ; les chèvres s'ennuient chez moi, je n'en garderai pas une.
+
+Cependant, il ne se découragea pas, et, après avoir perdu six chèvres de la même manière, il en acheta une septième ; seulement, cette fois, il eut soin de la prendre toute jeune, pour qu'elle s'habituât à demeurer chez lui.
+
+- Ah ! Gringoire, qu'elle était jolie la petite chèvre de M. Seguin ! qu'elle était jolie avec ses yeux doux, sa barbiche de sous-officier, ses sabots noirs et luisants, ses cornes zébrées et ses longs poils blancs qui lui faisaient une houppelande !
+
+ C'était presque aussi charmant que le cabri d'Esméralda, tu te rappelles, Gringoire ? et puis, docile, caressante, se laissant traire sans bouger, sans mettre son pied dans l'écuelle. Un amour de petite chèvre.
+
+M. Seguin avait derrière sa maison un clos entouré d'aubépines. C'est là qu'il mit la nouvelle pensionnaire.
+Il l'attacha à un pieu, au plus bel endroit du pré, en ayant soin de lui laisser beaucoup de corde, et de temps en temps, il venait voir si elle était bien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gossip de Julien</h5>
+        <p class="card-text">La chèvre de Mr Seguin
+La chèvre de Mr Seguin  d'Alphonse Daudet
+M. Seguin n'avait jamais eu de bonheur avec ses chèvres. Il les perdait toutes de la même façon : un beau matin, elles cassaient leur corde, s'en allaient dans la montagne, et là-haut le loup les mangeait.
+
+
+Ni les caresses de leur maître, ni la peur du loup, rien ne les retenait.
+C'était, parait-il, des chèvres indépendantes, voulant à tout prix le grand air et la liberté.
+
+
+Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. Il disait :
+- C'est fini ; les chèvres s'ennuient chez moi, je n'en garderai pas une.
+
+Cependant, il ne se découragea pas, et, après avoir perdu six chèvres de la même manière, il en acheta une septième ; seulement, cette fois, il eut soin de la prendre toute jeune, pour qu'elle s'habituât à demeurer chez lui.
+
+- Ah ! Gringoire, qu'elle était jolie la petite chèvre de M. Seguin ! qu'elle était jolie avec ses yeux doux, sa barbiche de sous-officier, ses sabots noirs et luisants, ses cornes zébrées et ses longs poils blancs qui lui faisaient une houppelande !
+
+ C'était presque aussi charmant que le cabri d'Esméralda, tu te rappelles, Gringoire ? et puis, docile, caressante, se laissant traire sans bouger, sans mettre son pied dans l'écuelle. Un amour de petite chèvre.
+
+M. Seguin avait derrière sa maison un clos entouré d'aubépines. C'est là qu'il mit la nouvelle pensionnaire.
+Il l'attacha à un pieu, au plus bel endroit du pré, en ayant soin de lui laisser beaucoup de corde, et de temps en temps, il venait voir si elle était bien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gossip de Jonathan</h5>
+        <p class="card-text">La chèvre de Mr Seguin
+La chèvre de Mr Seguin  d'Alphonse Daudet
+M. Seguin n'avait jamais eu de bonheur avec ses chèvres. Il les perdait toutes de la même façon : un beau matin, elles cassaient leur corde, s'en allaient dans la montagne, et là-haut le loup les mangeait.
+
+
+Ni les caresses de leur maître, ni la peur du loup, rien ne les retenait.
+C'était, parait-il, des chèvres indépendantes, voulant à tout prix le grand air et la liberté.
+
+
+Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. Il disait :
+- C'est fini ; les chèvres s'ennuient chez moi, je n'en garderai pas une.
+
+Cependant, il ne se découragea pas, et, après avoir perdu six chèvres de la même manière, il en acheta une septième ; seulement, cette fois, il eut soin de la prendre toute jeune, pour qu'elle s'habituât à demeurer chez lui.
+
+- Ah ! Gringoire, qu'elle était jolie la petite chèvre de M. Seguin ! qu'elle était jolie avec ses yeux doux, sa barbiche de sous-officier, ses sabots noirs et luisants, ses cornes zébrées et ses longs poils blancs qui lui faisaient une houppelande !
+
+ C'était presque aussi charmant que le cabri d'Esméralda, tu te rappelles, Gringoire ? et puis, docile, caressante, se laissant traire sans bouger, sans mettre son pied dans l'écuelle. Un amour de petite chèvre.
+
+M. Seguin avait derrière sa maison un clos entouré d'aubépines. C'est là qu'il mit la nouvelle pensionnaire.
+Il l'attacha à un pieu, au plus bel endroit du pré, en ayant soin de lui laisser beaucoup de corde, et de temps en temps, il venait voir si elle était bien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gossip de Houned</h5>
+        <p class="card-text">La chèvre de Mr Seguin
+La chèvre de Mr Seguin  d'Alphonse Daudet
+M. Seguin n'avait jamais eu de bonheur avec ses chèvres. Il les perdait toutes de la même façon : un beau matin, elles cassaient leur corde, s'en allaient dans la montagne, et là-haut le loup les mangeait.
+
+
+Ni les caresses de leur maître, ni la peur du loup, rien ne les retenait.
+C'était, parait-il, des chèvres indépendantes, voulant à tout prix le grand air et la liberté.
+
+
+Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. Il disait :
+- C'est fini ; les chèvres s'ennuient chez moi, je n'en garderai pas une.
+
+Cependant, il ne se découragea pas, et, après avoir perdu six chèvres de la même manière, il en acheta une septième ; seulement, cette fois, il eut soin de la prendre toute jeune, pour qu'elle s'habituât à demeurer chez lui.
+
+- Ah ! Gringoire, qu'elle était jolie la petite chèvre de M. Seguin ! qu'elle était jolie avec ses yeux doux, sa barbiche de sous-officier, ses sabots noirs et luisants, ses cornes zébrées et ses longs poils blancs qui lui faisaient une houppelande !
+
+ C'était presque aussi charmant que le cabri d'Esméralda, tu te rappelles, Gringoire ? et puis, docile, caressante, se laissant traire sans bouger, sans mettre son pied dans l'écuelle. Un amour de petite chèvre.
+
+M. Seguin avait derrière sa maison un clos entouré d'aubépines. C'est là qu'il mit la nouvelle pensionnaire.
+Il l'attacha à un pieu, au plus bel endroit du pré, en ayant soin de lui laisser beaucoup de corde, et de temps en temps, il venait voir si elle était bien.</p>
+      </div>
+    </div>
+  </div>
+</div>
